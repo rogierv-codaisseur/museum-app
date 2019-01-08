@@ -1,23 +1,36 @@
 body {
-  background-color: rgb(255, 227, 148);
+  background-color: #375E97;
   font-family: 'Staatliches', monospace;
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 main {
-  background: white;
+  background-color: #FFBB00;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #3F681C;
   width: 90%;
   margin: auto;
-  border-radius: 5px;
+  border-radius: 1rem;
   padding: 2rem 0;
 }
 
 h1 {
   margin: 2rem 1rem 2rem 1rem;
+  color: white;
 }
 
 h2 {
   margin: auto 2rem;
+}
+
+.artObject {
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 1rem;
 }
 
 #comments {
@@ -26,7 +39,7 @@ h2 {
 
 #comment {
   margin: 1rem auto;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 10px;
   max-width: 50%;
 }
@@ -41,7 +54,7 @@ form {
   width: 50%;
   min-width: 15rem;
   padding: 1rem;
-  border: 1px solid #CCC;
+  border: 1px solid white;
   border-radius: 10px;
 }
 
@@ -66,4 +79,12 @@ button {
   padding: 0.5rem 1rem;
   color: #ffffff;
   background-color: black;
+}
+
+footer {
+  color: white;
+}
+
+.heart {
+  color: #FB6542;
 }

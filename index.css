@@ -1,19 +1,26 @@
 body {
-  background-color: rgb(255, 227, 148);
+  background-color: #375E97;
   font-family: 'Staatliches', monospace;
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 main {
-  background: white;
+  background-color: #FFBB00;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #3F681C;
   width: 90%;
   margin: auto;
-  border-radius: 5px;
+  border-radius: 1rem;
   padding: 2rem 0;
 }
 
 h1 {
-  margin: 3rem 1rem 6rem 1rem;
+  margin: 2rem 1rem 2rem 1rem;
+  color: white;
 }
 
 h2 {
@@ -21,14 +28,22 @@ h2 {
 }
 
 .artObject {
-  max-width: 80%;
-  max-height: 20rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 20rem;
   margin: 1rem;
+  transition: transform .2s;
 }
 
-#gallery {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
+.artObject:hover {
+  transform: scale(1.5);
+  box-shadow: 0 80px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer {
+  color: white;
+}
+
+.heart {
+  color: #FB6542;
 }
