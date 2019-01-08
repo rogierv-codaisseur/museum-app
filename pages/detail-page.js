@@ -1,9 +1,25 @@
+function doesNotPassAllValidations(name, msg) {
+  if (!name || !msg) {
+    alert('You forgot to fill in your name or message!');
+    return true;
+  } else if (msg.length > 280) {
+    alert(`The message is longer than 280 characters! The message is currently ${msg.length} characters.`);
+    return true;
+  }
+  return false;
+}
+
 function submitComment() {
   // gather data
   const inputField = document.getElementById('name');
   const name = inputField.value;
   const textArea = document.getElementById('msg');
   const msg = textArea.value;
+
+  // check if user input passes validations
+  if (doesNotPassAllValidations(name, msg)) {
+    return null;
+  }
 
   // create the elements you need
   const comment = document.createElement('section');
