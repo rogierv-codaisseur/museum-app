@@ -23,6 +23,8 @@ h1 {
   color: white;
 }
 
+
+
 h2 {
   margin: auto 2rem;
 }
@@ -38,6 +40,35 @@ h2 {
 .artObject:hover {
   transform: scale(1.5);
   box-shadow: 0 80px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 0;
+    padding: 0 0 1rem 0;
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    padding: 0.5rem;
+  }
+
+  .artObject {
+    border-radius: 1rem;
+    box-shadow: none;
+    height: 10rem;
+    margin: 1rem;
+  }
+
+  .artObject:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 footer {
