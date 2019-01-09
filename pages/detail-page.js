@@ -1,3 +1,14 @@
+const inappropriateWords = ['foo', 'bar'];
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function checkInappropriateLanguage(msg, words) {
+  msgArray = msg.toLowerCase().split(" ");
+  return words.some(word => msgArray.indexOf(word) >= 0)
+}
+
 function doesNotPassAllValidations(name, msg) {
   if (!name && !msg) {
     alert('You forgot to fill in your name and message!');
@@ -8,15 +19,14 @@ function doesNotPassAllValidations(name, msg) {
   } else if (!msg) {
     alert('You forgot to fill in your message!');
     return true;
+  } else if (checkInappropriateLanguage(msg, inappropriateWords)) {
+    alert('Warning: this comment has been flagged as offensive');
+    return true;
   } else if (msg.length > 280) {
     alert(`The message is longer than 280 characters! The message is currently ${msg.length} characters.`);
     return true;
   }
   return false;
-}
-
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function submitComment() {
