@@ -1,6 +1,12 @@
 function doesNotPassAllValidations(name, msg) {
-  if (!name || !msg) {
-    alert('You forgot to fill in your name or message!');
+  if (!name && !msg) {
+    alert('You forgot to fill in your name and message!');
+    return true;
+  } else if (!name) {
+    alert('You forgot to fill in your name!');
+    return true;
+  } else if (!msg) {
+    alert('You forgot to fill in your message!');
     return true;
   } else if (msg.length > 280) {
     alert(`The message is longer than 280 characters! The message is currently ${msg.length} characters.`);
@@ -9,10 +15,14 @@ function doesNotPassAllValidations(name, msg) {
   return false;
 }
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function submitComment() {
   // gather data
   const inputField = document.getElementById('name');
-  const name = inputField.value;
+  let name = inputField.value;
   const textArea = document.getElementById('msg');
   const msg = textArea.value;
 
@@ -20,6 +30,8 @@ function submitComment() {
   if (doesNotPassAllValidations(name, msg)) {
     return null;
   }
+
+  name = capitalizeFirstLetter(name);
 
   // create the elements you need
   const comment = document.createElement('section');

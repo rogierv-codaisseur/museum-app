@@ -23,8 +23,6 @@ h1 {
   color: white;
 }
 
-
-
 h2 {
   margin: auto 2rem;
 }
@@ -38,7 +36,7 @@ h2 {
 }
 
 .artObject:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   box-shadow: 0 80px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
