@@ -420,7 +420,6 @@ function displayPainting() {
   artObject.appendChild(painter);
   artObject.appendChild(year);
   artObject.appendChild(moreInfo);
-  console.log(moreInfo);
 }
 
 displayPainting()
