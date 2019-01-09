@@ -1,6 +1,6 @@
 body {
   background-color: #375E97;
-  font-family: 'Staatliches', monospace;
+  font-family: 'Major Mono Display', monospace;
   text-align: center;
 }
 
@@ -65,11 +65,15 @@ h2 {
   margin: 2rem 1rem 2rem 1rem;
 }
 
-#comment {
+.comment {
   margin: 1rem auto;
   border: 1px solid white;
   border-radius: 10px;
   max-width: 50%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .formSection {
