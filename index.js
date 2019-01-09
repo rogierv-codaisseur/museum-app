@@ -337,7 +337,7 @@ for (let i = 0; i < paintings.length; i++) {
 function displayPainting(painting) {
   // Create anchor element and set the link
   const a = document.createElement('a');
-  a.setAttribute("href", "./pages/detail-page.html");
+  a.setAttribute("href", "./pages/detail-page.html?id=" + painting.id);
 
   // Create the image element and the related attributes
   const img = document.createElement('img');
@@ -350,5 +350,4 @@ function displayPainting(painting) {
   const gallerySection = document.getElementById('gallery');
   gallerySection.appendChild(a);
 }
-
 
